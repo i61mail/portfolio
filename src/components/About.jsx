@@ -3,7 +3,6 @@ import './About.css'
 
 const stats = [
   { number: '3+', label: 'Projects Completed' },
-  { number: '2+', label: 'Years of Experience' },
   { number: '6+', label: 'Technologies' },
 ]
 
