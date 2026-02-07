@@ -8,6 +8,7 @@
   --color-text-muted: #A0A0A0;
   --color-white: #FFFFFF;
   --color-dark: #0F0A1E;
+  --card-bg: #393053;
   
   --font-family: 'Inter', sans-serif;
   --transition: all 0.3s ease;
@@ -15,6 +16,23 @@
   --border-radius-sm: 8px;
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.2);
+  --navbar-scrolled-bg: rgba(24, 18, 43, 0.95);
+}
+
+/* ===== Light Theme ===== */
+[data-theme='light'] {
+  --color-primary: #89A8B2;
+  --color-secondary: #B3C8CF;
+  --color-tertiary: #E5E1DA;
+  --color-background: #F1F0E8;
+  --color-text: #2d3748;
+  --color-text-muted: #4a5568;
+  --color-white: #FFFFFF;
+  --color-dark: #E5E1DA;
+  --card-bg: #E5E1DA;
+  --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --navbar-scrolled-bg: rgba(241, 240, 232, 0.95);
 }
 
 /* ===== Reset & Base Styles ===== */

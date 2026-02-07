@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes, FaMoon, FaSun } from 'react-icons/fa'
 import './Navbar.css'
 
 const navLinks = [
@@ -11,7 +11,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ]
 
-function Navbar({ scrolled }) {
+function Navbar({ scrolled, theme, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const handleLinkClick = (e, href) => {
@@ -47,6 +47,14 @@ function Navbar({ scrolled }) {
             </li>
           ))}
         </ul>
+        
+        <button 
+          className="theme-toggle" 
+          onClick={toggleTheme}
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? <FaSun /> : <FaMoon />}
+        </button>
         
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FaTimes /> : <FaBars />}

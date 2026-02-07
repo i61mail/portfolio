@@ -10,7 +10,7 @@
 }
 
 .project-card {
-  background: var(--color-tertiary);
+  background: var(--card-bg);
   border-radius: var(--border-radius);
   overflow: hidden;
   transition: var(--transition);

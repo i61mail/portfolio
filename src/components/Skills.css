@@ -10,7 +10,7 @@
 }
 
 .skill-category {
-  background: var(--color-tertiary);
+  background: var(--card-bg);
   padding: 30px;
   border-radius: var(--border-radius);
   transition: var(--transition);

@@ -12,6 +12,10 @@ import './App.css'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme')
+    return savedTheme || 'dark'
+  })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,9 +26,18 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark')
+  }
+
   return (
     <div className="app">
-      <Navbar scrolled={scrolled} />
+      <Navbar scrolled={scrolled} theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
       <Skills />
