@@ -1,7 +1,7 @@
 .footer {
   background: var(--color-dark);
   padding: 30px 0;
-  border-top: 1px solid var(--color-tertiary);
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-content {

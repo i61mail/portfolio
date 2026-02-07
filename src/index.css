@@ -9,6 +9,7 @@
   --color-white: #FFFFFF;
   --color-dark: #0F0A1E;
   --card-bg: #393053;
+  --border-color: #393053;
   
   --font-family: 'Inter', sans-serif;
   --transition: all 0.3s ease;
@@ -30,6 +31,7 @@
   --color-white: #FFFFFF;
   --color-dark: #E5E1DA;
   --card-bg: #E5E1DA;
+  --border-color: #B3C8CF;
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
   --navbar-scrolled-bg: rgba(241, 240, 232, 0.95);
