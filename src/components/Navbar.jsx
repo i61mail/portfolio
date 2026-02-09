@@ -5,8 +5,8 @@ import './Navbar.css'
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
   { name: 'Blog', href: '#blog' },
   { name: 'Contact', href: '#contact' },
 ]
@@ -31,7 +31,8 @@ function Navbar({ scrolled, theme, toggleTheme }) {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <a href="#home" className="nav-logo" onClick={(e) => handleLinkClick(e, '#home')}>
-          <span className="logo-text">&lt;IR /&gt;</span>
+          <span className="logo-text">IR</span>
+          <span className="logo-dot">.</span>
         </a>
         
         <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
@@ -48,16 +49,18 @@ function Navbar({ scrolled, theme, toggleTheme }) {
           ))}
         </ul>
         
-        <button 
-          className="theme-toggle" 
-          onClick={toggleTheme}
-          aria-label="Toggle theme"
-        >
-          {theme === 'dark' ? <FaSun /> : <FaMoon />}
-        </button>
-        
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
+        <div className="nav-right">
+          <button 
+            className="theme-toggle" 
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <FaSun /> : <FaMoon />}
+          </button>
+          
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FaTimes /> : <FaBars />}
+          </div>
         </div>
       </div>
     </nav>

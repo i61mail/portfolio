@@ -1,148 +1,113 @@
 .about {
-  padding: 120px 0;
+  padding: 140px 0;
   background: var(--color-background);
   position: relative;
-  overflow: hidden;
 }
 
-
-
-.about-content {
+/* Bento Grid */
+.about-bento {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 80px;
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
 }
 
-.about-text p {
-  margin-bottom: 24px;
+.bento-card {
+  border: 1px solid var(--border-color);
+  padding: 36px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.bento-card:hover {
+  border-color: var(--color-primary);
+}
+
+/* Main text card spans full width */
+.bento-main {
+  grid-column: 1 / -1;
+}
+
+.bento-main p {
   color: var(--color-text-muted);
   font-size: 1.05rem;
   line-height: 1.9;
+  margin-bottom: 20px;
 }
 
-.about-text strong {
+.bento-main p:last-child {
+  margin-bottom: 0;
+}
+
+.bento-main strong {
   color: var(--color-primary);
   font-weight: 600;
 }
 
-.about-info {
+/* Stat cards */
+.bento-stat {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: 35px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(201, 104, 104, 0.15);
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.info-item {
+.bento-stat-num {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.bento-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Info card spans full width */
+.bento-info {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.bento-info-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: var(--color-text);
+  gap: 12px;
   font-family: var(--font-mono);
-  font-size: 0.9rem;
-  padding: 10px 0;
+  font-size: 0.85rem;
+  color: var(--color-text);
   transition: var(--transition);
 }
 
-.info-item:hover {
-  transform: translateX(8px);
+.bento-info-item:hover {
+  color: var(--color-primary);
 }
 
-.info-item svg {
-  width: 38px;
-  height: 38px;
-  padding: 9px;
-  background: transparent;
-  border: 1px solid var(--color-primary);
-  border-radius: 4px;
+.bento-info-item svg {
   color: var(--color-primary);
+  font-size: 1rem;
   flex-shrink: 0;
 }
 
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: sticky;
-  top: 120px;
-}
-
-.stat-card {
-  background: transparent;
-  padding: 35px 30px;
-  border: 1px solid rgba(201, 104, 104, 0.15);
-  border-radius: 4px;
-  text-align: left;
-  transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--color-primary);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.stat-card:hover::before {
-  transform: scaleY(1);
-}
-
-.stat-card:hover {
-  background: rgba(201, 104, 104, 0.08);
-  border-color: var(--color-primary);
-  transform: translateX(-5px);
-}
-
-.stat-number {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--color-primary);
-  margin-bottom: 5px;
-  line-height: 1;
-}
-
-.stat-label {
-  color: var(--color-text-muted);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-@media (max-width: 900px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-  
-  .about-stats {
-    flex-direction: row;
-    position: static;
-  }
-  
-  .stat-card {
-    flex: 1;
-  }
-}
-
 @media (max-width: 600px) {
-  .about-stats {
-    flex-direction: column;
+  .about-bento {
+    grid-template-columns: 1fr;
   }
-  
-  .stat-card {
-    padding: 25px 20px;
+
+  .bento-info {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bento-card {
+    padding: 24px;
   }
 }

@@ -4,40 +4,13 @@
   position: relative;
 }
 
-/* Floating geometric decorations */
-.app::before {
-  content: '';
-  position: fixed;
-  top: 15%;
-  left: -5%;
-  width: 300px;
-  height: 300px;
-  border: 1px solid rgba(201, 104, 104, 0.08);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  animation: floatRotate 25s ease-in-out infinite;
-}
 
-.app::after {
-  content: '';
-  position: fixed;
-  bottom: 10%;
-  right: -8%;
-  width: 400px;
-  height: 400px;
-  border: 1px solid rgba(201, 104, 104, 0.06);
-  transform: rotate(45deg);
-  pointer-events: none;
-  z-index: 0;
-  animation: floatRotate 30s ease-in-out infinite reverse;
-}
 
 /* Animation classes */
 .fade-in {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -46,44 +19,31 @@
   transform: translateY(0);
 }
 
-/* Stagger animation delays */
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }
-
-/* Creative keyframes */
-@keyframes floatRotate {
-  0%, 100% {
-    transform: rotate(0deg) translate(0, 0);
-  }
-  25% {
-    transform: rotate(5deg) translate(10px, -20px);
-  }
-  50% {
-    transform: rotate(-3deg) translate(-10px, 15px);
-  }
-  75% {
-    transform: rotate(7deg) translate(15px, -10px);
-  }
-}
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  50% { transform: translateY(-15px); }
 }
 
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-}
-
-@keyframes dash {
-  to { stroke-dashoffset: 0; }
+  50% { opacity: 0.7; }
 }
 
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes expandLine {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }

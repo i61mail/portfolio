@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaPaperPlane, FaArrowRight } from 'react-icons/fa'
 import './Contact.css'
 
 function Contact() {
@@ -28,82 +28,82 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
-        <div className="contact-content">
-          <div className="contact-info">
+        <div className="section-header">
+          <h2 className="section-title">Contact</h2>
+          <div className="section-line"></div>
+        </div>
+
+        <div className="contact-grid">
+          <div className="contact-left">
             <p className="contact-text">
-              I'm currently open to new opportunities and collaborations. 
-              Whether you have a project in mind or just want to say hi, 
+              I'm currently open to new opportunities and collaborations.
+              Whether you have a project in mind or just want to say hi,
               feel free to reach out!
             </p>
-            <div className="contact-details">
-              <a href="mailto:ismailrk55@gmail.com" className="contact-item">
+
+            <div className="contact-links">
+              <a href="mailto:ismailrk55@gmail.com" className="contact-link-item">
                 <FaEnvelope />
                 <span>ismailrk55@gmail.com</span>
+                <FaArrowRight className="contact-arrow" />
               </a>
-              <a href="tel:+212631039431" className="contact-item">
+              <a href="tel:+212631039431" className="contact-link-item">
                 <FaPhone />
                 <span>+212 6 31 03 94 31</span>
+                <FaArrowRight className="contact-arrow" />
               </a>
-              <div className="contact-item">
+              <div className="contact-link-item">
                 <FaMapMarkerAlt />
                 <span>Casablanca, Morocco</span>
               </div>
             </div>
+
             <div className="contact-socials">
-              <a href="https://github.com/i61mail" target="_blank" rel="noopener noreferrer" className="social-btn">
-                <FaGithub />
+              <a href="https://github.com/i61mail" target="_blank" rel="noopener noreferrer" className="contact-social">
+                <FaGithub /> GitHub
               </a>
-              <a href="https://www.linkedin.com/in/ismailrkik/" target="_blank" rel="noopener noreferrer" className="social-btn">
-                <FaLinkedin />
-              </a>
-              <a href="mailto:ismailrk55@gmail.com" className="social-btn">
-                <FaEnvelope />
+              <a href="https://www.linkedin.com/in/ismailrkik/" target="_blank" rel="noopener noreferrer" className="contact-social">
+                <FaLinkedin /> LinkedIn
               </a>
             </div>
           </div>
+
           <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <input 
-                type="text" 
+            <div className="form-row">
+              <input
+                type="text"
                 name="name"
-                placeholder="Your Name" 
+                placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
-                required 
+                required
               />
-            </div>
-            <div className="form-group">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 name="email"
-                placeholder="Your Email" 
+                placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                required 
-              />
-            </div>
-            <div className="form-group">
-              <input 
-                type="text" 
-                name="subject"
-                placeholder="Subject" 
-                value={formData.subject}
-                onChange={handleChange}
-                required 
-              />
-            </div>
-            <div className="form-group">
-              <textarea 
-                name="message"
-                rows="5" 
-                placeholder="Your Message"
-                value={formData.message}
-                onChange={handleChange}
                 required
-              ></textarea>
+              />
             </div>
-            <button type="submit" className="btn btn-primary btn-full">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit" className="btn btn-primary">
               <FaPaperPlane /> Send Message
             </button>
           </form>
