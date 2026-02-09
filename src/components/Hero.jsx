@@ -44,6 +44,9 @@ function Hero() {
             <div className="hero-avatar">
               <FaUser />
             </div>
+            <div className="hero-deco-1"></div>
+            <div className="hero-deco-2"></div>
+            <div className="hero-deco-3"></div>
           </div>
         </div>
       </div>

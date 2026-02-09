@@ -1,60 +1,102 @@
 .skills {
-  padding: 100px 0;
+  padding: 120px 0;
   background: var(--color-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(201, 104, 104, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  gap: 24px;
 }
 
 .skill-category {
-  background: var(--card-bg);
-  padding: 30px;
-  border-radius: var(--border-radius);
+  background: transparent;
+  padding: 35px;
+  border: 1px solid rgba(201, 104, 104, 0.12);
+  border-radius: 4px;
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-category::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.skill-category:hover::after {
+  transform: scaleX(1);
 }
 
 .skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
+  border-color: var(--color-primary);
+  background: rgba(201, 104, 104, 0.06);
 }
 
 .skill-category-header {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .skill-category-header svg {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--color-primary);
 }
 
 .skill-category-header h3 {
-  font-size: 1.2rem;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .skill-tag {
-  background: var(--color-secondary);
-  color: var(--color-text);
+  background: transparent;
+  color: var(--color-text-muted);
   padding: 8px 18px;
-  border-radius: 50px;
-  font-size: 0.9rem;
+  border: 1px solid rgba(201, 104, 104, 0.15);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   font-weight: 500;
   transition: var(--transition);
+  letter-spacing: 0.02em;
 }
 
 .skill-tag:hover {
-  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  background: rgba(201, 104, 104, 0.1);
 }
 
 @media (max-width: 900px) {
