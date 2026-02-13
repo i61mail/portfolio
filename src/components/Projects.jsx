@@ -1,4 +1,4 @@
-import { FaDocker, FaServer, FaGamepad, FaGithub, FaArrowRight } from 'react-icons/fa'
+import { FaDocker, FaServer, FaGamepad, FaChartBar, FaGithub, FaArrowRight } from 'react-icons/fa'
 import './Projects.css'
 
 const projects = [
@@ -28,6 +28,15 @@ const projects = [
     description: 'Developed a comprehensive web platform featuring user management with secure authentication, real-time dashboard for activity monitoring, customizable user profiles, real-time multiplayer game with WebSocket synchronization, deployed with Docker.',
     tech: ['Next.js', 'React', 'Fastify', 'WebSockets', 'Docker'],
     github: 'https://github.com/i61mail/Pong-Web-Platform'
+  },
+  {
+    icon: <FaChartBar />,
+    title: 'Grafino',
+    shortTitle: 'Grafino',
+    letter: 'G',
+    description: 'Built a full-stack real-time log monitoring dashboard inspired by Grafana. Features a RESTful API with Express.js for log creation, filtering by level and service, text search, and MongoDB aggregation for live statistics. Includes interactive charts, advanced filtering, pagination, auto-refresh, and dark/light theme toggle.',
+    tech: ['React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
+    github: 'https://github.com/i61mail/Grafino'
   }
 ]
 
