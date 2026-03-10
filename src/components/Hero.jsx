@@ -18,7 +18,7 @@ function Hero() {
             <a href="https://github.com/i61mail" target="_blank" rel="noopener noreferrer" className="hero-social-link">
               <FaGithub />
             </a>
-            <a href="mailto:ismailrk55@gmail.com" className="hero-social-link">
+            <a href="mailto:ismailrkik.dev@gmail.com" className="hero-social-link">
               <FaEnvelope />
             </a>
             <a href="https://www.linkedin.com/in/ismailrkik/" target="_blank" rel="noopener noreferrer" className="hero-social-link">

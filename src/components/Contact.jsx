@@ -20,7 +20,7 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     const { name, email, subject, message } = formData
-    const mailtoLink = `mailto:ismailrk55@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
+    const mailtoLink = `mailto:ismailrkik.dev@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
     window.location.href = mailtoLink
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
@@ -42,14 +42,14 @@ function Contact() {
             </p>
 
             <div className="contact-links">
-              <a href="mailto:ismailrk55@gmail.com" className="contact-link-item">
+              <a href="mailto:ismailrkik.dev@gmail.com" className="contact-link-item">
                 <FaEnvelope />
-                <span>ismailrk55@gmail.com</span>
+                <span>ismailrkik.dev@gmail.com</span>
                 <FaArrowRight className="contact-arrow" />
               </a>
-              <a href="tel:+212631039431" className="contact-link-item">
+              <a href="tel:+212649071456" className="contact-link-item">
                 <FaPhone />
-                <span>+212 6 31 03 94 31</span>
+                <span>+212 6 49 07 14 56</span>
                 <FaArrowRight className="contact-arrow" />
               </a>
               <div className="contact-link-item">

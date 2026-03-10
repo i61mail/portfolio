@@ -13,7 +13,7 @@ function Footer() {
           <div className="footer-links">
             <a href="https://github.com/i61mail" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
             <a href="https://www.linkedin.com/in/ismailrkik/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-            <a href="mailto:ismailrk55@gmail.com"><FaEnvelope /></a>
+            <a href="mailto:ismailrkik.dev@gmail.com"><FaEnvelope /></a>
           </div>
         </div>
         <div className="footer-bottom">
