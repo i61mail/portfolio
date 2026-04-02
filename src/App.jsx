@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Blog from './components/Blog'
@@ -40,6 +41,7 @@ function App() {
       <Navbar scrolled={scrolled} theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />
+      <Experience />
       <Projects />
       <Skills />
       <Blog />
