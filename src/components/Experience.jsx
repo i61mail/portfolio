@@ -4,7 +4,7 @@ import './Experience.css'
 const experiences = [
   {
     role: 'Freelance Full-Stack Web Developer',
-    company: 'Client Project: Gummita',
+    company: 'Gummita L.L.C-FZ',
     title: 'Gummita Tracker — Arabic (RTL) routine tracker',
     period: '2026',
     description: [
